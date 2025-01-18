@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colz: Producto de alta calidad para transformar tu experiencia.">
+    <meta name="keywords" content="Colz, lujo, producto innovador, elegante, comprar Colz">
+    <meta name="author" content="Tu nombre o empresa">
+    <title>Colz</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            background-color: #3b3b3b;
+            border-bottom: 1px solid #083521;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('wp.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.5); /* Sombra negra con opacidad */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra negra más sutil */
+}
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            background-color: #083521;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sección de Producto */
+        .producto {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .producto h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra con opacidad */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra negra más sutil */
+        }
+
+        .producto p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .producto-imagen img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sección de Beneficios */
+        .beneficios {
+            padding: 60px 0;
+            background-color: #083521;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra con opacidad */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra negra más sutil */
+        }
+
+        .beneficios h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .beneficios .beneficio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .beneficios .icono {
+            font-size: 2.5rem;
+            color: #007BFF;
+        }
+
+        .beneficios p {
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        /* Sección de Precios */
+        .precios {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #606060;
+        }
+
+        .precios h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra con opacidad */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra negra más sutil */
+        }
+
+        .precio {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px;
+            display: inline-block;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .precio h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .precio p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .precio button {
+            padding: 10px 20px;
+            background-color: #083521;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .precio button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sección de Contacto */
+        .contacto {
+            padding: 60px 0;
+            background-color: #083521;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra con opacidad */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra negra más sutil */
+        }
+
+        .contacto h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contacto p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #c2c2c2;
+        }
+
+        .contacto form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contacto input, .contacto select, .contacto textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contacto button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="logo.png" alt="Logo de Colz"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#producto">Producto</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div>
+            <h1>Bienvenido a Colz</h1>
+            <p>Marca nueva de relojes exclusivos mexicana tapatía que redefinen el lujo la precisión de un buen reloj.</p>
+            <a href="#producto"><button>Explorar Más</button></a>
+        </div>
+    </section>
+
+    <section id="producto" class="producto">
+        <div class="container">
+            <h2>¿Qué es Colz?</h2>
+            <p>   Colz es una marca de relojes exclusiva, nacida con la misión de redefinir el lujo y la precisión.<br>
+                Cada reloj es una pieza única, diseñada en ediciones limitadas para aquellos que buscan algo más que <br>
+                un accesorio, sino una declaración de estilo y sofisticación. Con un enfoque en la calidad y la innovación,<br>
+                Colz fusiona lo clásico con lo moderno, ofreciendo relojes que no solo marcan el tiempo, sino que también<br>
+                 marcan el comienzo de una nueva era en la relojería. Elegir Colz es elegir exclusividad, elegancia y una<br>
+                  experiencia única.</p>
+            <div class="producto-imagen">
+                <img src="3 relojes.png" alt="Producto Colz">
+            </div>
+        </div>
+    </section>
+
+    <section class="beneficios">
+        <div class="container">
+            <h2>Beneficios</h2>
+            <div class="beneficio">
+                <div class="icono">💎</div>
+                <p>Diseño exclusivo y moderno.</p>
+            </div>
+            <div class="beneficio">
+                <div class="icono">⌚</div>
+                <p>Precisión en cada reloj.</p>
+            </div>
+            <div class="beneficio">
+                <div class="icono">🌟</div>
+                <p>Materiales de calidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="precios">
+        <div class="container">
+            <h2>Precios</h2>
+            <div class="precio">
+                <h3>Colz silver black watch</h3>
+                <p>$449.99 MXN</p>
+                <img src="1.png" alt="Colz premium color" height="250" width="250" align="center">
+                <button onclick="location.href='mailto:colzempresa@gmail.com?subject=Ordenar%20Colz%20silver%20black.'"> Comprar Ahora</button>
+            </div>
+            <style>
+                .precio {
+                  text-align: center; /* Centra el texto y otros elementos dentro del div */
+                  padding: 20px; /* Espaciado interno para un mejor diseño */
+                  border: 1px solid #ccc; /* Borde opcional */
+                  border-radius: 10px; /* Bordes redondeados opcionales */
+                  width: 300px; /* Ancho del contenedor */
+                  margin: 0 auto; /* Centra horizontalmente el contenedor */
+                }
+                img {
+                  display: block; /* Elimina el pequeño espacio debajo de la imagen */
+                  margin: 10px auto; /* Centra la imagen dentro del contenedor */
+                }
+                button {
+                  padding: 10px 20px;
+                  background-color: #007bff;
+                  color: #fff;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+                button:hover {
+                  background-color: #0056b3;
+                }
+              </style>
+            <div class="precio">
+                <h3>Colz premium color watch</h3>
+                <p>$499.99 MXN</p>
+                <img src="2.png" alt="Colz premium color" height="250" width="250" align="center">
+                <button onclick="location.href='mailto:colzempresa@gmail.com?subject=Ordenar%20Colz%20premium%20color.'"> Comprar Ahora</button>
+            </div>
+            <p>Haz click en "Comprar Ahora" y nos contactaremos contigo en breve.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna duda sobre nuestros productos? Haz click en "Contactar"  para ponernos en contacto contigo.</p>
+            <button onclick="location.href='mailto:colzempresa@gmail.com?subject=Contacto'"> Contactar</button>
+           
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Colz. Todos los derechos reservados.</p>
+        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Uso</a></p>
+    </footer>
+</body>
+</html>
